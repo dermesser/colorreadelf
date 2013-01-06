@@ -1,0 +1,27 @@
+Color ReadELF output (creadelf)
+***********************************
+
+USAGE: ([...=...]: optional argument with default value)
+
+    $ creadelf [option = -a] file
+
+
+This tool colors the output of readelf to enhance readability.
+
+The colors used are tunable in the script itself. Default colors are:
+
+- green for addresses like 0xc0ffee or 003a9e4080a0
+- cyan background for timestamps (2013-01-05T18:22:31)
+- red for SO names (libc.so.6)
+- blue for SYMBOLS (like GNU_STACK)
+- cyan for symbol table entries (fclose or abort@GLIBC_2.2.5)
+- magenta for section names (.interp)
+
+The program is (obviously) written in Perl and uses (obviously) Perl's
+Regex engine.
+
+The colored output may have little mistakes, e.g. not matched function names etc.,
+but it should work fine all in all.
+
+This program should work fine with the output of GNU readelf on GNU/Linux and FreeBSD with
+ELFs from both platforms.
