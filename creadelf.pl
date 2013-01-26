@@ -63,11 +63,11 @@ foreach my $line (@lines)
     # timestamps
     $line =~ s/(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2})/${timestamp}${1}${normal}/g;
     # shared objects
-    $line =~ s/([\w\d\-\/]+\.so(\.\d+)?)/${so}${1}${normal}/g;
+    $line =~ s/([+\w\d\-\/]+\.so(\.\d+)?)/${so}${1}${normal}/g;
     # SYMBOLS
     $line =~ s/(?<![\w-])([A-Z_]{3,})(?![\w-])/${sym}${1}${normal}/g;
     # .sections
-    $line =~ s/(?<![0-9a-zA-Z])(\.[a-zA-Z\._-]+)/${section}${1}${normal}/g;
+    $line =~ s/(?<![0-9a-zA-Z+])(\.[a-zA-Z\._-]+)/${section}${1}${normal}/g;
     
     if ($in_sym_table == 1)
     {
