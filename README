@@ -25,3 +25,8 @@ but it should work fine all in all.
 
 This program should work fine with the output of GNU readelf on GNU/Linux and FreeBSD with
 ELFs from both platforms.
+
+LICENSE
+**************
+
+This program is licensed by the terms and conditions of GPL v3: https://www.gnu.org/licenses/gpl.txt
